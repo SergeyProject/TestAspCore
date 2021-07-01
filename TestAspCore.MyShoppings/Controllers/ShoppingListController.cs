@@ -28,9 +28,9 @@ namespace TestAspCore.MyShoppings.Controllers
         [Route("api/CreateProduct")]
         public IActionResult CreateProduct([FromBody] ShoppingList item)
         {
-            //ApplicationDataAccess dataAccess = new ApplicationDataAccess();
-            //string str = dataAccess.CreateNew(item);
-            return Ok("ok");
+            ApplicationDataAccess dataAccess = new ApplicationDataAccess();
+            string str = dataAccess.CreateNew(item);
+            return Ok(str);
         }
 
         [HttpGet]
